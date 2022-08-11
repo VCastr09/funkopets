@@ -1,0 +1,56 @@
+@import "z-index";
+
+.SITE_ROOT {
+  min-height: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.POPUPS_ROOT {
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: scroll;
+  position: fixed;
+  z-index: $zindex-drop-down-menu-base-dropWrapper;
+
+  &.mobile {
+    z-index: $zindex-full-screen-overlay;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &.responsive {
+    .POPUPS_WRAPPER {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &:not(.responsive) {
+    .POPUPS_WRAPPER {
+      position: relative;
+      overflow: auto;
+
+      > div { /* page */
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.auto-generated-link {
+  color: inherit;
+}
+
+.warmup .hidden-on-warmup {
+  visibility: hidden;
+}
+
+body:not([data-js-loaded]) [data-hide-prejs] {
+  visibility: hidden;
+}
