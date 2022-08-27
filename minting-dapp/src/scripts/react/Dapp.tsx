@@ -230,7 +230,7 @@ export default class Dapp extends React.Component<Props, State> {
               Keep safe! <span className="emoji">❤️</span>
             </div>
 
-{/*
+
             {!this.isWalletConnected() || this.state.isWhitelistMintEnabled ?
               <div className="merkle-proof-manual-address">
                 <h2>Whitelist Proof</h2>
@@ -246,7 +246,7 @@ export default class Dapp extends React.Component<Props, State> {
                 <input id="merkle-proof-manual-address" type="text" placeholder="0x000..." disabled={this.state.userAddress !== null} value={this.state.userAddress ?? this.state.merkleProofManualAddress} ref={(input) => this.merkleProofManualAddressInput = input!} onChange={() => {this.setState({merkleProofManualAddress: this.merkleProofManualAddressInput.value})}} /> <button onClick={() => this.copyMerkleProofToClipboard()}>Generate and copy to clipboard</button>
               </div>
               : null}
-              */}
+              
           </div>
         }
       </>
