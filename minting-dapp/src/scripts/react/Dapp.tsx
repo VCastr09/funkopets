@@ -87,11 +87,11 @@ export default class Dapp extends React.Component<Props, State> {
   {
     try {
       this.setState({loading: true});
-      var free = 1;
-      if(await this.contract.hasMinted() || await this.contract.freeGone()){
-        free = 0;
-      }
-      await this.contract.mint(amount, {value: this.state.tokenPrice.mul(amount - free)});
+      // var free = 1;
+      // if(await this.contract.hasMinted() || await this.contract.freeGone()){
+      //   free = 0;
+      // }
+      await this.contract.mint(amount, {value: this.state.tokenPrice.mul(amount /* - free */)});
 
       this.refreshContractState();
       this.setState({loading: false});
@@ -105,11 +105,11 @@ export default class Dapp extends React.Component<Props, State> {
   {
     try {
       this.setState({loading: true});
-      var free = 1;
-      if(await this.contract.hasMinted() || await this.contract.freeGone()){
-        free = 0;
-      }
-      await this.contract.whitelistMint(amount, Whitelist.getProofForAddress(this.state.userAddress!), {value: this.state.tokenPrice.mul(amount - free)});
+      // var free = 1;
+      // if(await this.contract.hasMinted() || await this.contract.freeGone()){
+      //   free = 0;
+      // }
+      await this.contract.whitelistMint(amount, Whitelist.getProofForAddress(this.state.userAddress!), {value: this.state.tokenPrice.mul(amount /* - free */)});
 
       this.refreshContractState();
       this.setState({loading: false});

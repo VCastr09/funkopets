@@ -4,30 +4,30 @@ import * as Marketplaces from '../lib/Marketplaces';
 import whitelistAddresses from './whitelist.json';
 
 const CollectionConfig: CollectionConfigInterface = {
-  testnet: Networks.ethereumTestnet,
+  testnet: Networks.goerliTestnet,
   mainnet: Networks.ethereumMainnet,
   // The contract name can be updated using the following command:
   // yarn rename-contract NEW_CONTRACT_NAME
   // Please DO NOT change it manually!
-  contractName: 'MOONFROGS',
-  tokenName: 'Moon Frogs',
-  tokenSymbol: 'MFRGS',
-  hiddenMetadataUri: 'ipfs://QmQbbK2XfcTwjEMJN4yTzkT1UkH5HHTFQRELe16jJgigDg/',
-  maxSupply: 5555,
+  contractName: 'OLDSCHOOLVIBEZ',
+  tokenName: 'OldSchoolVibez',
+  tokenSymbol: 'OSVBZ',
+  hiddenMetadataUri: 'ipfs://null/',
+  maxSupply: 3333,
   whitelistSale: {
-    price: 0.0047,
-    maxMintAmountPerTx: 5555,
+    price: 0.0019,
+    maxMintAmountPerTx: 3333,
   },
   preSale: {
-    price: 0.0047,
-    maxMintAmountPerTx: 5555,
+    price: 0.0027,
+    maxMintAmountPerTx: 3333,
   },
   publicSale: {
-    price: 0.0047,
-    maxMintAmountPerTx: 5555,
+    price: 0.0027,
+    maxMintAmountPerTx: 3333,
   },
-  contractAddress: '0x6edC3b673ae6679d63B62418Dac2f7707B23bb84',
-  marketplaceIdentifier: 'moon-frogs',
+  contractAddress: '0xB5bC966Dc8F7c601012Bb81a5A5780794CC74133',
+  marketplaceIdentifier: 'old-school-vibez',
   marketplaceConfig: Marketplaces.openSea,
   whitelistAddresses,
 };

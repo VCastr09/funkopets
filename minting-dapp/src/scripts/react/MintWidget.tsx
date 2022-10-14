@@ -70,15 +70,15 @@ export default class MintWidget extends React.Component<Props, State> {
         {this.canMint() ?
         
           <div className="mint-widget">
-            <img alt="LOGO-GIF.gif" src="https://static.wixstatic.com/media/e3f3b3_798e9b9f405041d58c23844519853bbd~mv2.gif"></img>
+            {/* <img alt="LOGO-GIF.gif" src="https://static.wixstatic.com/media/e3f3b3_798e9b9f405041d58c23844519853bbd~mv2.gif"></img> */}
             <div className="preview">
-              <img src="/build/images/preview.png" className='imgPreview' alt="Collection preview" />
+              <img src="/build/images/preview.gif" className='imgPreview' alt="Collection preview" />
             </div>
 
             <div className="price">
-              <strong>First FREE & Rest 0.0047ETH</strong>
-              <br/><br/>
-              <strong>Total price:</strong> {utils.formatEther(this.props.tokenPrice.mul(this.state.mintAmount - 1))} {this.props.networkConfig.symbol}
+              {/* <strong>{this.props.tokenPrice}ETH each</strong>
+              <br/><br/> */}
+              <strong>Total price:</strong> {utils.formatEther(this.props.tokenPrice.mul(this.state.mintAmount /* - 1 */))} {this.props.networkConfig.symbol}
             </div>
 
             <div className="controls">

@@ -53,3 +53,12 @@ export const polygonMainnet: NetworkConfigInterface = {
     generateContractUrl: (contractAddress: string) => `https://polygonscan.com/address/${contractAddress}`,
   },
 }
+
+export const goerliTestnet: NetworkConfigInterface = {
+  chainId: 5,
+  symbol: 'GoerliETH',
+  blockExplorer: {
+    name: 'Goerli test network',
+    generateContractUrl: (contractAddress: string) => `https://goerli.etherscan.io/address/${contractAddress}`,
+  },
+}

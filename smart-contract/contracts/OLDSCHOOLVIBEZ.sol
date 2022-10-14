@@ -8,7 +8,7 @@ import '@openzeppelin/contracts/access/Ownable.sol';
 import '@openzeppelin/contracts/utils/cryptography/MerkleProof.sol';
 import '@openzeppelin/contracts/security/ReentrancyGuard.sol';
 
-contract MOONFROGS is ERC721A, Ownable, ReentrancyGuard {
+contract OLDSCHOOLVIBEZ is ERC721A, Ownable, ReentrancyGuard {
 
   using Strings for uint256;
 
@@ -19,10 +19,9 @@ contract MOONFROGS is ERC721A, Ownable, ReentrancyGuard {
   string public hiddenMetadataUri;
   
   uint256 public cost;
-  uint256 public finalMaxSupply = 5555;
+  uint256 public finalMaxSupply = 3333;
   uint256 public currentMaxSupply;
   uint256 public maxMintAmountPerTx;
-  uint256 public freeSupply = 999;
 
   bool public paused = true;
   bool public whitelistMintEnabled = false;
@@ -46,8 +45,7 @@ contract MOONFROGS is ERC721A, Ownable, ReentrancyGuard {
     require(!paused, 'The contract is paused!');
     require(_mintAmount > 0 && _mintAmount <= maxMintAmountPerTx, 'Invalid mint amount!');
     require(totalSupply() + _mintAmount <= currentMaxSupply, 'Max supply exceeded!');
-    uint free = _numberMinted(_msgSender()) > 0 || totalSupply() > freeSupply ? 0 : 1;
-    require(msg.value >= cost * (_mintAmount - free), "PAYMENT: invalid value");
+    require(msg.value >= cost * _mintAmount, "PAYMENT: invalid value");
 
 
     _safeMint(_msgSender(), _mintAmount);
@@ -59,8 +57,7 @@ contract MOONFROGS is ERC721A, Ownable, ReentrancyGuard {
     require(MerkleProof.verify(_merkleProof, merkleRoot, leaf), 'Invalid proof!');
     require(_mintAmount > 0 && _mintAmount <= maxMintAmountPerTx, 'Invalid mint amount!');
     require(totalSupply() + _mintAmount <= currentMaxSupply, 'Max supply exceeded!');
-    uint free = _numberMinted(_msgSender()) > 0 || totalSupply() > freeSupply ? 0 : 1;
-    require(msg.value >= cost * (_mintAmount - free), "PAYMENT: invalid value");
+    require(msg.value >= cost * _mintAmount, "PAYMENT: invalid value");
 
     _safeMint(_msgSender(), _mintAmount);
   }
@@ -72,10 +69,6 @@ contract MOONFROGS is ERC721A, Ownable, ReentrancyGuard {
 
   function hasMinted() external view returns(bool){
     return _numberMinted(_msgSender()) > 0 ? true : false; 
-  }
-
-  function freeGone() external view returns(bool){
-    return totalSupply() > freeSupply ? true : false; 
   }
 
   function walletOfOwner(address _owner) public view returns (uint256[] memory) {
@@ -132,10 +125,6 @@ contract MOONFROGS is ERC721A, Ownable, ReentrancyGuard {
   function setCurrentMaxSupply(uint256 _supply) public onlyOwner {
     require(_supply <= finalMaxSupply && _supply >= totalSupply());
     currentMaxSupply = _supply;
-  }
-
-  function setFreeSupply(uint256 _newFreeSupply) public onlyOwner {
-    freeSupply = _newFreeSupply;
   }
 
   function setCost(uint256 _cost) public onlyOwner {

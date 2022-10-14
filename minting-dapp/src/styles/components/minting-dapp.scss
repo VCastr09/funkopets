@@ -173,7 +173,7 @@
   }
 
   .mint-widget {
-    background: linear-gradient(11deg, #cbaeae 0%, #ba12fd 100%);
+    background: linear-gradient(11deg, #cbaeae 0%, #6d6570 100%);
     @apply flex flex-col items-center;
     @apply rounded-lg;
     @apply overflow-hidden;
@@ -183,7 +183,7 @@
     @apply shadow;
 
     .preview {
-      background: linear-gradient(11deg, #cbaeae 0%, #ba12fd 100%);
+      background: linear-gradient(11deg, #cbaeae 0%, #6d6570 100%);
       @apply p-8;
 
       @apply bg-primary-200;
@@ -221,12 +221,12 @@
       }
 
       .decrease {
-        background: linear-gradient(11deg, #cbaeae 0%, #ba12fd 100%);
+        background: linear-gradient(11deg, #cbaeae 0%, #6d6570 100%);
         @apply border-r border-neutral-200;
       }
 
       .increase{
-        background: linear-gradient(11deg, #cbaeae 0%, #ba12fd 100%);
+        background: linear-gradient(11deg, #cbaeae 0%, #6d6570 100%);
       }
 
       .mint-amount {
@@ -238,7 +238,7 @@
       }
 
       .primary {
-        background: linear-gradient(11deg, #cbaeae 0%, #ba12fd 100%);
+        background: linear-gradient(11deg, #cbaeae 0%, #6d6570 100%);
         @apply border-0;
       }
     }
