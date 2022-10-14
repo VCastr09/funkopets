@@ -25,7 +25,7 @@ contract OLDSCHOOLVIBEZ is ERC721A, Ownable, ReentrancyGuard {
 
   bool public paused = true;
   bool public whitelistMintEnabled = false;
-  bool public revealed = true;
+  bool public revealed = false;
 
   constructor(
     string memory _tokenName,
@@ -38,7 +38,7 @@ contract OLDSCHOOLVIBEZ is ERC721A, Ownable, ReentrancyGuard {
     setCost(_cost);
     currentMaxSupply = _maxSupply;
     setMaxMintAmountPerTx(_maxMintAmountPerTx);
-    setUriPrefix(_hiddenMetadataUri);
+    setHiddenMetadataUri(_hiddenMetadataUri);
   }
 
   function mint(uint256 _mintAmount) external payable {

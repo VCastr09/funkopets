@@ -12,7 +12,7 @@ const CollectionConfig: CollectionConfigInterface = {
   contractName: 'OLDSCHOOLVIBEZ',
   tokenName: 'OldSchoolVibez',
   tokenSymbol: 'OSVBZ',
-  hiddenMetadataUri: 'ipfs://null/',
+  hiddenMetadataUri: 'ipfs://bafybeidewpgqunylifs6wixpagzwcp4ngvybxwxovv4rkn3xcyxcogqgqy/hidden.json',
   maxSupply: 3333,
   whitelistSale: {
     price: 0.0019,
