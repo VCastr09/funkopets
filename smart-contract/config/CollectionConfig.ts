@@ -26,7 +26,7 @@ const CollectionConfig: CollectionConfigInterface = {
     price: 0.0027,
     maxMintAmountPerTx: 3333,
   },
-  contractAddress: '0xB5bC966Dc8F7c601012Bb81a5A5780794CC74133',
+  contractAddress: '0x21BfEA2487cD88593a177bEFc441f26B9AC79878',
   marketplaceIdentifier: 'old-school-vibez',
   marketplaceConfig: Marketplaces.openSea,
   whitelistAddresses,
