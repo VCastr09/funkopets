@@ -26,7 +26,7 @@ const CollectionConfig: CollectionConfigInterface = {
     price: 0.0047,
     maxMintAmountPerTx: 1000,
   },
-  contractAddress: '0x21BfEA2487cD88593a177bEFc441f26B9AC79878',
+  contractAddress: '0xE5F8090575DA11c4ef964A2E93D35443C633A613',
   marketplaceIdentifier: 'darumacats-nft',
   marketplaceConfig: Marketplaces.openSea,
   whitelistAddresses,
