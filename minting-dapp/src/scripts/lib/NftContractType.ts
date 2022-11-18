@@ -1,7 +1,7 @@
-// The name below ("OLDSCHOOLVIBEZ") should match the name of your Solidity contract.
+// The name below ("DARUMACATS") should match the name of your Solidity contract.
 // It can be updated using the following command:
 // yarn rename-contract NEW_CONTRACT_NAME
 // Please DO NOT change it manually!
-import { OLDSCHOOLVIBEZ as NftContractType } from '../../../../smart-contract/typechain/index';
+import { DARUMACATS as NftContractType } from '../../../../smart-contract/typechain/index';
 
 export default NftContractType;

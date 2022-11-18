@@ -8,7 +8,7 @@ import '@openzeppelin/contracts/access/Ownable.sol';
 import '@openzeppelin/contracts/utils/cryptography/MerkleProof.sol';
 import '@openzeppelin/contracts/security/ReentrancyGuard.sol';
 
-contract OLDSCHOOLVIBEZ is ERC721A, Ownable, ReentrancyGuard {
+contract DARUMACATS is ERC721A, Ownable, ReentrancyGuard {
 
   using Strings for uint256;
 
@@ -19,7 +19,7 @@ contract OLDSCHOOLVIBEZ is ERC721A, Ownable, ReentrancyGuard {
   string public hiddenMetadataUri;
   
   uint256 public cost;
-  uint256 public finalMaxSupply = 3333;
+  uint256 public finalMaxSupply = 1000;
   uint256 public currentMaxSupply;
   uint256 public maxMintAmountPerTx;
 

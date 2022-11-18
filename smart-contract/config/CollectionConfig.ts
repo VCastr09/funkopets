@@ -9,25 +9,25 @@ const CollectionConfig: CollectionConfigInterface = {
   // The contract name can be updated using the following command:
   // yarn rename-contract NEW_CONTRACT_NAME
   // Please DO NOT change it manually!
-  contractName: 'OLDSCHOOLVIBEZ',
-  tokenName: 'OldSchoolVibez',
-  tokenSymbol: 'OSVBZ',
+  contractName: 'DARUMACATS',
+  tokenName: 'Darumacats',
+  tokenSymbol: 'DRCTS',
   hiddenMetadataUri: 'ipfs://bafybeidewpgqunylifs6wixpagzwcp4ngvybxwxovv4rkn3xcyxcogqgqy/hidden.json',
-  maxSupply: 3333,
+  maxSupply: 1000,
   whitelistSale: {
-    price: 0.0019,
-    maxMintAmountPerTx: 3333,
+    price: 0.0047,
+    maxMintAmountPerTx: 1000,
   },
   preSale: {
-    price: 0.0027,
-    maxMintAmountPerTx: 3333,
+    price: 0.0047,
+    maxMintAmountPerTx: 1000,
   },
   publicSale: {
-    price: 0.0027,
-    maxMintAmountPerTx: 3333,
+    price: 0.0047,
+    maxMintAmountPerTx: 1000,
   },
   contractAddress: '0x21BfEA2487cD88593a177bEFc441f26B9AC79878',
-  marketplaceIdentifier: 'old-school-vibez',
+  marketplaceIdentifier: 'darumacats-nft',
   marketplaceConfig: Marketplaces.openSea,
   whitelistAddresses,
 };
