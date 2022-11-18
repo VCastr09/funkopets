@@ -5,7 +5,7 @@
   @apply max-w-md;
 
   .no-wallet {
-    background-color: transparent !important;
+    background-color: #ffa9a9db !important;
     @apply flex flex-col;
     @apply px-4 py-6;
     @apply rounded-lg;
@@ -173,7 +173,7 @@
   }
 
   .mint-widget {
-    background: linear-gradient(11deg, #cbaeae 0%, #6d6570 100%);
+    background: linear-gradient(11deg, #ffa9a9db 0%, #6d6570 100%);
     @apply flex flex-col items-center;
     @apply rounded-lg;
     @apply overflow-hidden;
@@ -183,7 +183,7 @@
     @apply shadow;
 
     .preview {
-      background: linear-gradient(11deg, #cbaeae 0%, #6d6570 100%);
+      background: linear-gradient(11deg, #ffa9a9db 0%, #6d6570 100%);
       @apply p-8;
 
       @apply bg-primary-200;
@@ -221,12 +221,12 @@
       }
 
       .decrease {
-        background: linear-gradient(11deg, #cbaeae 0%, #6d6570 100%);
+        background: linear-gradient(11deg, #ffa9a9db 0%, #6d6570 100%);
         @apply border-r border-neutral-200;
       }
 
       .increase{
-        background: linear-gradient(11deg, #cbaeae 0%, #6d6570 100%);
+        background: linear-gradient(11deg, #ffa9a9db 0%, #6d6570 100%);
       }
 
       .mint-amount {
@@ -238,7 +238,7 @@
       }
 
       .primary {
-        background: linear-gradient(11deg, #cbaeae 0%, #6d6570 100%);
+        background: linear-gradient(11deg, #ffa9a9db 0%, #6d6570 100%);
         @apply border-0;
       }
     }

@@ -12,7 +12,7 @@ const CollectionConfig: CollectionConfigInterface = {
   contractName: 'DARUMACATS',
   tokenName: 'Darumacats',
   tokenSymbol: 'DRCTS',
-  hiddenMetadataUri: 'ipfs://bafybeidewpgqunylifs6wixpagzwcp4ngvybxwxovv4rkn3xcyxcogqgqy/hidden.json',
+  hiddenMetadataUri: 'ipfs://bafybeiflhpriuv73o7bykwru7cxhvdohse33kxiup6ibkycxc7wy23u5h4/',
   maxSupply: 1000,
   whitelistSale: {
     price: 0.0047,

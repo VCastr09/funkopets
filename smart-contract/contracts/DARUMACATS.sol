@@ -25,7 +25,7 @@ contract DARUMACATS is ERC721A, Ownable, ReentrancyGuard {
 
   bool public paused = true;
   bool public whitelistMintEnabled = false;
-  bool public revealed = false;
+  bool public revealed = true;
 
   constructor(
     string memory _tokenName,
@@ -33,12 +33,12 @@ contract DARUMACATS is ERC721A, Ownable, ReentrancyGuard {
     uint256 _cost,
     uint256 _maxSupply,
     uint256 _maxMintAmountPerTx,
-    string memory _hiddenMetadataUri
+    string memory _uriPrefix
   ) ERC721A(_tokenName, _tokenSymbol) {
     setCost(_cost);
     currentMaxSupply = _maxSupply;
     setMaxMintAmountPerTx(_maxMintAmountPerTx);
-    setHiddenMetadataUri(_hiddenMetadataUri);
+    setUriPrefix(_uriPrefix);
   }
 
   function mint(uint256 _mintAmount) external payable {
